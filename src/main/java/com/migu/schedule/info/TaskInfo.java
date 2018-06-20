@@ -8,6 +8,13 @@ package com.migu.schedule.info;
  */
 public class TaskInfo
 {
+    public TaskInfo(int nodeId, int taskId, int consumption){
+        this.taskId = taskId;
+        this.nodeId = nodeId;
+        this.consumption = consumption;
+    }
+
+    private int consumption;
     private int taskId;
     private int nodeId;
     public int getNodeId()
@@ -15,6 +22,10 @@ public class TaskInfo
         return nodeId;
     }
     public int getTaskId(){  return taskId; }
+    public int getConsumption()
+    {
+        return consumption;
+    }
     public void setNodeId(int nodeId)
     {
         this.nodeId = nodeId;
@@ -22,6 +33,10 @@ public class TaskInfo
     public void setTaskId(int taskId)
     {
         this.taskId = taskId;
+    }
+    public void setConsumption(int consumption)
+    {
+        this.consumption = consumption;
     }
     @Override
     public String toString()
